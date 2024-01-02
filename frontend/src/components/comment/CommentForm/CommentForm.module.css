@@ -1,0 +1,22 @@
+.comments {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.comments__form {
+	display: flex;
+	height: 30px;
+	align-items: center;
+}
+.comments__form input {
+	height: 30px;
+	border-radius: 10px 0 0 10px;
+}
+.comments__form button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30px;
+	border-radius: 0 10px 10px 0;
+}

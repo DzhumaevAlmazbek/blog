@@ -1,3 +1,4 @@
+import styles from "./CommentForm.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { commentActions } from "../../../store/slices/comment/commentSlice";
@@ -39,8 +40,8 @@ function CommentForm() {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
+    <div className={styles.comments}>
+      <form onSubmit={handleSubmit} className={styles.comments__form}>
         <input
           type="text"
           name="content"

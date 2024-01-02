@@ -1,0 +1,27 @@
+.comments {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin: 0 10px;
+}
+
+.comments__item {
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.comments__item_content {
+	display: flex;
+	gap: 10px;
+}
+
+.comments__item button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 10px;
+	width: 10px;
+	background: none;
+	color: #222;
+}

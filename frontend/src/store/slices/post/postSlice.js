@@ -80,7 +80,7 @@ const postSlice = createSlice({
         state.isLoading = true;
       })
       .addCase(createPost.fulfilled, (state) => {
-        state.createPostForm = {};
+        state.createPostForm = initialState.createPostForm;
         state.isLoading = false;
       })
       .addCase(createPost.rejected, (state, { payload }) => {

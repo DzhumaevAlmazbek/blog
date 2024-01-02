@@ -1,0 +1,15 @@
+.post__form {
+	flex-direction: column;
+	margin: 150px auto;
+	padding: 15px;
+	gap: 15px;
+	background-color: #444;
+	border-radius: 15px;
+}
+.post__form label {
+	display: flex;
+	gap: 10px;
+}
+.post__form input {
+	width: 100%;
+}

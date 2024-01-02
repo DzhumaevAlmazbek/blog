@@ -1,0 +1,40 @@
+.posts {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	margin: 30px auto;
+	padding: 15px;
+	border-radius: 20px;
+	align-items: center;
+}
+
+.posts__sort {
+	display: flex;
+	gap: 15px;
+	align-items: center;
+	background-color: #444;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+.posts__pagination {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	background-color: #444;
+	padding: 15px;
+	border-radius: 15px;
+}
+.posts__pagination button {
+	display: flex;
+	height: 40px;
+	width: 40px;
+	align-items: center;
+	justify-content: center;
+}
+
+.posts__pagination_posts {
+	display: grid;
+	grid-template-columns: repeat(3, 300px);
+	gap: 15px;
+}

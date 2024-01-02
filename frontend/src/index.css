@@ -11,6 +11,14 @@
 	font-synthesis: none;
 }
 
+a,
+p,
+div,
+span,
+button {
+	overflow: hidden;
+}
+
 a {
 	font-weight: 500;
 	color: #555;
@@ -24,6 +32,11 @@ body {
 	display: flex;
 	max-width: 1440px;
 	min-height: 100vh;
+}
+
+form {
+	display: flex;
+	max-width: 500px;
 }
 
 input {
@@ -43,6 +56,7 @@ button {
 	color: #555;
 	transition: border-color 0.25s;
 	cursor: pointer;
+	max-width: 150px;
 }
 button:hover {
 	border-color: #555555;

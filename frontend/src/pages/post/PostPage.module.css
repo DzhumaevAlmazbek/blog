@@ -1,0 +1,36 @@
+.post {
+	display: flex;
+	flex-direction: column;
+	margin: 30px auto;
+	padding: 15px;
+	gap: 15px;
+	border-radius: 15px;
+	background-color: #444;
+}
+
+.post__content {
+	display: flex;
+	margin: 0 10px;
+	gap: 50px;
+}
+
+.post__content_text {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.post__content_text span {
+	font-weight: bold;
+}
+
+.post__comments {
+	padding: 15px;
+	border-radius: 0 0 15px 15px;
+	background-color: #555;
+}
+
+button {
+	display: flex;
+	align-items: center;
+	height: 30px;
+}

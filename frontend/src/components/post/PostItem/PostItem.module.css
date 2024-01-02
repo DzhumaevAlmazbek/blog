@@ -1,0 +1,16 @@
+.post {
+	display: flex;
+	flex-direction: column;
+	max-width: 300px;
+	gap: 15px;
+	background-color: #555;
+	border-radius: 20px;
+	padding: 20px;
+	cursor: pointer;
+}
+
+.post_info {
+}
+
+.post__content p {
+}

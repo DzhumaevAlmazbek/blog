@@ -1,3 +1,4 @@
+import styles from "./PostPage.module.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -43,23 +44,27 @@ function PostPage() {
 
   return (
     post && (
-      <div>
-        <div>
-          <div>
+      <div className={styles.post}>
+        <div className={styles.post__content}>
+          <div className={styles.post__content_text}>
             <h2>{post.title}</h2>
-            <p>{post.description}</p>
-            <p>{post.content}</p>
-            <p>{post.updatedAt.slice(0, 10)}</p>
+            <p>
+              <span>Created at:</span> {post.updatedAt.slice(0, 10)}
+            </p>
+            <p>
+              <span>Description:</span> {post.description}
+            </p>
+            <p>
+              <span>Content:</span> {post.content}
+            </p>
           </div>
           {isPostAuthor && (
-            <div>
-              <button onClick={() => handleClick(currentPostId)}>
-                Delete post
-              </button>
-            </div>
+            <button onClick={() => handleClick(currentPostId)}>
+              Delete post
+            </button>
           )}
         </div>
-        <div>
+        <div className={styles.post__comments}>
           <CommentForm />
         </div>
       </div>

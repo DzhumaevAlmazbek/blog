@@ -1,0 +1,31 @@
+label {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+input {
+	width: 100%;
+}
+
+button {
+	margin: 0 auto;
+}
+
+.sign_up__form {
+	display: flex;
+	flex-direction: column;
+	margin: 150px auto;
+	gap: 15px;
+	padding: 40px;
+	border-radius: 15px;
+	background-color: #444;
+}
+
+.sign_up__form_link {
+	margin: 0 auto;
+}
+.sign_up__form_link a {
+	margin: 0 0 0 5px;
+	color: #ffdab9;
+}

@@ -1,3 +1,4 @@
+import styles from "./SignUpPage.module.css";
 import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,45 +33,43 @@ function SignUpPage() {
   }, [isAuthenticated]);
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>Email</span>
-          <input
-            type="email"
-            value={form.email}
-            name="email"
-            onChange={(e) => handleChangeForm(e)}
-            autoComplete="email"
-          />
-        </label>
-        <label>
-          <span>Username</span>
-          <input
-            type="text"
-            value={form.username}
-            name="username"
-            onChange={(e) => handleChangeForm(e)}
-            autoComplete="username"
-          />
-        </label>
-        <label>
-          <span>Password</span>
-          <input
-            type="password"
-            value={form.password}
-            name="password"
-            onChange={(e) => handleChangeForm(e)}
-            autoComplete="current-password"
-          />
-        </label>
-        <button type="submit">Sign up</button>
-        <p>
-          Already have an account?
-          <Link to="/auth/sign-in">Sign in</Link>
-        </p>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className={styles.sign_up__form}>
+      <label>
+        <span>Email</span>
+        <input
+          type="email"
+          value={form.email}
+          name="email"
+          onChange={(e) => handleChangeForm(e)}
+          autoComplete="email"
+        />
+      </label>
+      <label>
+        <span>Username</span>
+        <input
+          type="text"
+          value={form.username}
+          name="username"
+          onChange={(e) => handleChangeForm(e)}
+          autoComplete="username"
+        />
+      </label>
+      <label>
+        <span>Password</span>
+        <input
+          type="password"
+          value={form.password}
+          name="password"
+          onChange={(e) => handleChangeForm(e)}
+          autoComplete="current-password"
+        />
+      </label>
+      <button type="submit">Sign up</button>
+      <p className={styles.sign_up__form_link}>
+        Already have an account?
+        <Link to="/auth/sign-in">Sign in</Link>
+      </p>
+    </form>
   );
 }
 

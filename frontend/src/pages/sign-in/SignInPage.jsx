@@ -1,3 +1,4 @@
+import styles from "./SignInPage.module.css";
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -32,31 +33,29 @@ function SignInPage() {
   }, [isAuthenticated]);
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <label>
-          <span>Email</span>
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={(e) => handleChangeForm(e)}
-            autoComplete="email"
-          />
-        </label>
-        <label>
-          <span>Password</span>
-          <input
-            type="password"
-            name="password"
-            value={form.password}
-            onChange={(e) => handleChangeForm(e)}
-            autoComplete="current-password"
-          />
-        </label>
-        <button type="submit">Sign in</button>
-      </form>
-    </div>
+    <form onSubmit={handleSubmit} className={styles.sign_in__form}>
+      <label>
+        <span>Email</span>
+        <input
+          type="email"
+          name="email"
+          value={form.email}
+          onChange={(e) => handleChangeForm(e)}
+          autoComplete="email"
+        />
+      </label>
+      <label>
+        <span>Password</span>
+        <input
+          type="password"
+          name="password"
+          value={form.password}
+          onChange={(e) => handleChangeForm(e)}
+          autoComplete="current-password"
+        />
+      </label>
+      <button type="submit">Sign in</button>
+    </form>
   );
 }
 
